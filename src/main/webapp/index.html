@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Danke - 당케; 당신을 위한 케이크</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css"
+	integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH"
+	crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link href="css/shop-homepage.css" rel="stylesheet">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/my.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<div>
+		<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+
+			<div class="container">
+				<div class="navbar-brand" href="#">
+					<div class="input-group-sm">
+						<div id="msgDiv">
+							<input type="text" size="5" id="id" placeholder="ID"> <input
+								size="5" id="pw" type="password" placeholder="PW"> <input
+								type="button" class="btn btn-secondary" id="loginBtn"
+								value="로그인">
+						</div>
+					</div>
+				</div>
+
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarResponsive" aria-controls="navbarResponsive"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active "><a class="nav-link text-light"
+							href="#">Home <span class="sr-only">(current)</span>
+						</a></li>
+						<li class="nav-item"><a class="nav-link text-light"
+							href="html/memberInfo.html">ID/PW찾기</a></li>
+						<li class="nav-item"><a class="nav-link text-light" href="#"
+							onclick="window.open('html/orderForm.html', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=475,height=500');">장바구니</a></li>
+						<li class="nav-item"><a class="nav-link text-light" href="#"
+							onclick="window.open('html/memberInsertForm.html', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=400,height=680');">회원가입</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-lg-3">
+
+				<h1 class="my-4">Danke 🧁</h1>
+				<div class="list-group">
+					<a href="#" class="list-group-item">종류별 케이크 찾기</a> <a href="#"
+						class="list-group-item">지역별 매장 찾기</a> <a href="#"
+						class="list-group-item">우리집 주변 매장 찾기</a> 
+				</div>
+				<br>
+				<form method=post action="list.heyrin">
+				<input type="button" id="list" class = "btn btn-primary" value="리뷰 모아보기"></form>
+
+			</div>
+			<!-- /.col-lg-3 -->
+
+			<div class="col-lg-9">
+
+				<div id="carouselExampleIndicators" class="carousel slide my-4"
+					data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators" data-slide-to="0"
+							class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="carousel-item active">
+							<img class="d-block img-fluid" src="img/banner_birthdaycake.jpg"
+								alt="First slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block img-fluid" src="img/banner_cake.jpg"
+								alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block img-fluid" src="img/banner_cake2.jpg"
+								alt="Third slide">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators"
+						role="button" data-slide="prev"> <span
+						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+						class="sr-only">Previous</span>
+					</a> <a class="carousel-control-next" href="#carouselExampleIndicators"
+						role="button" data-slide="next"> <span
+						class="carousel-control-next-icon" aria-hidden="true"></span> <span
+						class="sr-only">Next</span>
+					</a>
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top"
+								src="img/lettering_round.JPG" alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#" class="orderForm" name="레터링 케이크(라운드)">레터링
+										케이크(라운드)</a>
+								</h4>
+								<h5>35,000</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Amet numquam aspernatur!</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">&#9733; &#9733; &#9733;
+									&#9733; &#9734;</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top"
+								src="img/lettering_heart.JPG" alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#" class="orderForm" name="레터링 케이크(하트)">레터링
+										케이크(하트)</a>
+								</h4>
+								<h5>$24.99</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor
+									sit amet.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">&#9733; &#9733; &#9733;
+									&#9733; &#9734;</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top"
+								src="img/lettering_flower.JPG" alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#" class="orderForm" name="레터링 케이크(플라워)">레터링
+										케이크(플라워)</a>
+								</h4>
+								<h5>35,000</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Amet numquam aspernatur!</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">&#9733; &#9733; &#9733;
+									&#9733; &#9734;</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top"
+								src="img/drawing_character.JPG" alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#" class="orderForm" name="일러스트 케이크">일러스트 케이크</a>
+								</h4>
+								<h5>40,000</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Amet numquam aspernatur!</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">&#9733; &#9733; &#9733;
+									&#9733; &#9734;</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top"
+								src="img/whitebeanpaste.JPG" alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#" class="orderForm" name="앙금 케이크">앙금 케이크 </a>
+								</h4>
+								<h5>40,000</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor
+									sit amet.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">&#9733; &#9733; &#9733;
+									&#9733; &#9734;</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top" src="img/picknick.JPG"
+								alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#" class="orderForm" name="도시락 케이크">도시락 케이크</a>
+								</h4>
+								<h5>15,000</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Amet numquam aspernatur!</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">&#9733; &#9733; &#9733;
+									&#9733; &#9734;</small>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /.row -->
+
+			</div>
+			<!-- /.col-lg-9 -->
+
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /.container -->
+
+	<!-- Footer -->
+	<footer class="py-5 bg-primary">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Danke</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+	$(function() {
+
+		var login = $.cookie('logined');
+		$("#msgDiv").html(login);
+	});
+</script>
+
+
+</html>

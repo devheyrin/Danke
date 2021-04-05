@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous">
+
+<link href="../css/orderForm.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<!-- jQuery library -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="../js/my.js"></script>
+
+
+
+
+	<section class="jumbotron text-center">
+		<div class="container">
+			<h1 class="jumbotron-heading">장바구니</h1>
+		</div>
+	</section>
+	<form role="form">
+		<div class="container mb-4">
+			<div class="row">
+
+				<div class="col-12">
+
+					<div class="table-responsive">
+
+						<!-- 					<table>
+
+						<tr>
+							<th scope="col" width="20%"></th>
+							<th scope="col" width="20%">상품</th>
+							<th scope="col" width="20%">Available</th>
+							<th scope="col" width="25%" class="text-center">수량</th>
+							<th scope="col" width="10%" class="text-right">가격</th>
+							<th width="10%"></th>
+						</tr>
+
+					</table> -->
+
+						<!-- <tr>
+								<td><img src="https://dummyimage.com/50x50/55595c/fff" />
+								</td>
+								<td>레터링 케이크(라운드)</td>
+								<td>In stock</td>
+								<td><input class="form-control" type="text" value="1" /></td>
+								<td class="text-right">124,90 €</td>
+								<td class="text-right"><button
+										class="btn btn-sm btn-danger">
+										<i class="fa fa-trash"></i>
+									</button></td>
+							</tr>
+							<tr>
+								<td><img src="https://dummyimage.com/50x50/55595c/fff" />
+								</td>
+								<td>일러스트 케이크</td>
+								<td>In stock</td>
+								<td><input class="form-control" type="text" value="1" /></td>
+								<td class="text-right">33,90 €</td>
+								<td class="text-right"><button
+										class="btn btn-sm btn-danger">
+										<i class="fa fa-trash"></i>
+									</button></td>
+							</tr>
+							<tr>
+								<td><img src="https://dummyimage.com/50x50/55595c/fff" />
+								</td>
+								<td>앙금 케이크</td>
+								<td>In stock</td>
+								<td><input class="form-control" type="text" value="1" /></td>
+								<td class="text-right">70,00 €</td>
+								<td class="text-right"><button
+										class="btn btn-sm btn-danger">
+										<i class="fa fa-trash"></i>
+									</button></td>
+							</tr>
+							<tr>
+								<td><img src="https://dummyimage.com/50x50/55595c/fff" />
+								</td>
+								<td>앙금 케이크</td>
+								<td>In stock</td>
+								<td><input class="form-control" type="text" value="1" /></td>
+								<td class="text-right">70,00 €</td>
+								<td class="text-right"><button
+										class="btn btn-sm btn-danger">
+										<i class="fa fa-trash"></i>
+									</button></td>
+							</tr> -->
+
+
+						<div id="itemDiv" class="form-group text-center">여기에 추가</div>
+						<!-- <tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>상품금액합계</td>
+						<td class="text-right">0000원</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>배송비</td>
+						<td class="text-right">0000원</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><strong>총액</strong></td>
+						<td class="text-right"><strong>0000원</strong></td>
+					</tr>
+ -->
+					</div>
+				</div>
+				<div class="box">
+					<div class="form-group text-center col mb-2">
+						<div class="row" align="right">
+							<div class="col-sm-12  col-md-6">
+								<input type="button" id="anotherBtn" class="btn btn-second"
+									value="다른 상품 추가 주문하기"> <input type="button"
+									id="cancelBtn" class="btn btn-secondary" value="장바구니 비우기">
+								<input type="button" id="orderBtn" class="btn btn-primary"
+									value="주문하기">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+</body>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+	var basket = $.cookie("basket");
+	//alert(basket);
+	var obj = null;
+	if (basket) { //쿠키에 장바구니가 있으면
+		obj = JSON.parse(basket);//json을 javascript 객체로 바꿔서
+		let item_html = "";
+		var items = "";
+		obj.product
+				.forEach(function(item) { // 하나씩의 아이템(품목)을 꺼내서				
+					item_html += '<tr>'
+					item_html += '<td width="20%"><label for="inputName" margin-right="10"> 상품명 </label></td>';
+					item_html += '<td width="20%"><input size="20" type="text"  id="name" value="'+item.name+'" disabled="disabled"></td>';
+					item_html += '<td width="20%"><label for="InputEmail"> 수량 </label></td>';
+					item_html += '<td width="20%"><input type="number" min="1"  max="100" step="1" value="'+item.quantity+'" id="number"/></td>';
+					item_html += '<td><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button></td>'
+					item_html += '<br>';
+					items += item.name + " : " + item.quantity + "개\n";
+					item_html += '</tr>'
+				});
+		$("#itemDiv").html(item_html);
+	}
+</script>
+
+
+</html>

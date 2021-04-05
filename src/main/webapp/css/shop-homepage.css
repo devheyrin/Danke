@@ -1,0 +1,27 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template/shop-homepage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 100px;
+}
+
+.d-block{
+	width: 900px;
+	height: 350px;
+}
+
+footer .py-5{
+	background-color:#78c2ad;
+	
+}
+
+.bg-primary{
+	background-color: #78c2ad;
+}
+
+.btn-secondary{
+	background-color: #f3969a;
+}
+

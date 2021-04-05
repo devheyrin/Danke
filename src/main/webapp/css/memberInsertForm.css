@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+
+.btn-secondary{
+	background-color: #f3969a;
+	color: white;
+}
+
+.btn-outline-primary{
+	border-color:#78c2ad;
+	
+}
+
+
